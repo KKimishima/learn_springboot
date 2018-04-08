@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<h1>フォームのテスト</h1>
+<form action="/demopost" method="post">
+  <ul>
+    <li>
+      <input type="checkbox" id="ch" name="ch" >
+      <label for="ch">チェック</label>
+    </li>
+    <li>
+      <input type="radio" id="ra-1" name="ra" value="man" checked="checked">
+      <label for="ra-1">男</label>
+      <input type="radio" id="ra-2" name="ra" value="woman">
+      <label for="ra-2">女</label>
+    </li>
+    <li>
+      <select id="se" name="se">
+        <option value="se1">選択1</option>
+        <option value="se2">選択2</option>
+        <option value="se3">選択3</option>
+      </select>
+    </li>
+    <li>
+      <input type="text" name="text" id="text">
+    </li>
+  </ul>
+
+  <input type="submit" value="送信">
+</form>
+<p>フォーム送信結果</p>
+<pre th:text="${msg}"></pre>
+
+</body>
+</html>

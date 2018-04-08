@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>thymeleaf練習</title>
+</head>
+<body>
+<h1 th:text="#{content.title}"></h1>
+<p th:text="#{content.message}"></p>
+<p th:text="${#dates.format(new java.util.Date(),'yyyy/MM/dd HH:mm')}"></p>
+
+</body>
+</html>
